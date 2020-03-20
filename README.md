@@ -121,6 +121,7 @@ Wooz uses this file to save the tasks, here is a sample of this file:
 		"action": "RunWebpack",
 		"type": "webpack",
 		"path": "/home/mohammed/MyTmp/11/webpack",
+		"buildFolder": "build",
 		"copyDistTo": "/home/mohammed/MyTmp/11/prod/dist-copy"
 	},
 	{
@@ -165,7 +166,7 @@ The tasks are self-explained, you can have as many tasks as you want, here is an
     1. Run git to update the repository at the `path` that you specified and it will force the pull request so it will **ERASE** any local changes.
     2. Run npm install if Wooz found any changes in the `package.json` file.
     3. Run `npm run build`.
-    4. Copy `dist` to the path that you specified in `copyDistTo`.
+    4. Copy the `buildFolder`(if no buildFolder specified then the buildFolder will be `dist`) to the path that you specified in `copyDistTo`.
 
 - **HTML**: Wooz will do the following using this type of task:
 

@@ -27,6 +27,7 @@
 		"action": "RunWebpack",
 		"type": "webpack",
 		"path": "/home/mohammed/MyTmp/11/webpack",
+		"buildFolder": "build",
 		"copyDistTo": "/home/mohammed/MyTmp/11/prod/dist-copy"
 	},
 	{
