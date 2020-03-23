@@ -30,6 +30,7 @@ A CLI application that allows you to automate your usual tasks!
 
 1. First, make sure you have the latest version of [Node.js](https://nodejs.org) installed.
 2. Wooz relies on [git](https://git-scm.com) and [quasar](https://quasar-framework.org) to run some tasks that depend on them, so make sure these tools are installed if you are planning to use these kinds of tasks, otherwise just ignore them!
+3. **Tested only with git repositories that uses HTTP(S) URLs for their remote(not tested with SSH URLs).**
 
 ### Installation
 
