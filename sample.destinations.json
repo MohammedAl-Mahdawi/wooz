@@ -31,6 +31,11 @@
 		"copyDistTo": "/home/mohammed/MyTmp/11/prod/dist-copy"
 	},
 	{
+		"action": "RunNextJS",
+		"type": "NextJS",
+		"path": "/home/mohammed/MyTmp/11/NextJS"
+	},
+	{
 		"action": "SomeTasks",
 		"type": "custom",
 		"subTasks": [

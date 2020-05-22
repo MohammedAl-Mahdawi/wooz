@@ -126,6 +126,11 @@ Wooz uses this file to save the tasks, here is a sample of this file:
 		"copyDistTo": "/home/mohammed/MyTmp/11/prod/dist-copy"
 	},
 	{
+		"action": "RunNextJS",
+		"type": "NextJS",
+		"path": "/home/mohammed/MyTmp/11/NextJS"
+	},
+	{
 		"action": "SomeTasks",
 		"type": "custom",
 		"subTasks": [
@@ -151,34 +156,40 @@ The tasks are self-explained, you can have as many tasks as you want, here is an
 - **QuasarSSR**: Wooz will do the following using this type of task:
 
     1. Run git to update the repository at the `path` that you specified and it will force the pull request so it will **ERASE** any local changes.
-    2. Run npm install if Wooz found any changes in the `package.json` file.
+    2. Run `npm install` if Wooz found any changes in the `package.json` file.
     3. Run Quasar SSR PWA build.
     4. Copy `ssr-mat` to the path that you specified in `copyDistTo`.
 
 - **QuasarPwa**: Wooz will do the following using this type of task:
 
     1. Run git to update the repository at the `path` that you specified and it will force the pull request so it will **ERASE** any local changes.
-    2. Run npm install if Wooz found any changes in the `package.json` file.
+    2. Run `npm install` if Wooz found any changes in the `package.json` file.
     3. Run Quasar PWA build.
     4. Copy `pwa-mat` to the path that you specified in `copyDistTo`.
 
 - **webpack**: Wooz will do the following using this type of task:
 
     1. Run git to update the repository at the `path` that you specified and it will force the pull request so it will **ERASE** any local changes.
-    2. Run npm install if Wooz found any changes in the `package.json` file.
+    2. Run `npm install` if Wooz found any changes in the `package.json` file.
     3. Run `npm run build`.
     4. Copy the `buildFolder`(if no buildFolder specified then the buildFolder will be `dist`) to the path that you specified in `copyDistTo`.
+
+- **NextJS**: Wooz will do the following using this type of task:
+
+    1. Run git to update the repository at the `path` that you specified and it will force the pull request so it will **ERASE** any local changes.
+    2. Run `npm install` if Wooz found any changes in the `package.json` file.
+    3. Run `npm run build`.
 
 - **HTML**: Wooz will do the following using this type of task:
 
     1. Run git to update the repository at the `path` that you specified and it will force the pull request so it will **ERASE** any local changes.
-    2. Run npm install if it found `package.json` file and found any changes in the `package.json` file.
+    2. Run `npm install` if it found `package.json` file and found any changes in the `package.json` file.
     3. Copy the folder content to the path that you specified in `copyDistTo` and exclude the folders that you specified in the `exclude` option(comma separated folder names).
 
 - **repository**: Wooz will do the following using this type of task:
 
     1. Run git to update the repository at the `path` that you specified and it will force the pull request so it will **ERASE** any local changes.
-    2. Run npm install if Wooz found any changes in the `package.json` file.
+    2. Run `npm install` if Wooz found any changes in the `package.json` file.
 
 - **custom**: This is where you can construct your tasks, the `custom` task allows you to create sub-tasks, currently it only allows you to run command(s) sequentially, the command will run in the same order that they appear in it in the `wooz.tasks.json`, so in the above example the command `rm -rf deleteme` will run and finished then the command `git clone https://github.com/MohammedAl-Mahdawi/nosbackup.git` run.
 
